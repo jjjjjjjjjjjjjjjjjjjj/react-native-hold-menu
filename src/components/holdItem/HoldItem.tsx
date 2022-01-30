@@ -66,6 +66,7 @@ const HoldItemComponent = ({
   actionParams,
   closeOnTap,
   children,
+  longPressGestureHandlerProps,
 }: HoldItemProps) => {
   //#region hooks
   const { state, menuProps } = useInternal();
@@ -396,6 +397,7 @@ const HoldItemComponent = ({
         return ({ children: handlerChildren }: GestureHandlerProps) => (
           <LongPressGestureHandler
             minDurationMs={150}
+            {...longPressGestureHandlerProps}
             onHandlerStateChange={gestureEvent}
           >
             {handlerChildren}
