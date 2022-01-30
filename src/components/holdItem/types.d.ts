@@ -1,6 +1,7 @@
 import { ViewStyle } from 'react-native';
 import { MenuItemProps } from '../menu/types';
 import { TransformOriginAnchorPosition } from '../../utils/calculations';
+import { LongPressGestureHandlerProps } from 'react-native-gesture-handler'
 
 export type HoldItemProps = {
   /**
@@ -115,6 +116,8 @@ export type HoldItemProps = {
    * closeOnTap={true}
    */
   closeOnTap?: boolean;
+  
+  longPressGestureHandlerProps?: LongPressGestureHandlerProps;
 };
 
 export type GestureHandlerProps = {
