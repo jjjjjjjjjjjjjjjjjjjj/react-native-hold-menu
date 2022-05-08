@@ -48,6 +48,12 @@ const MenuItemComponent = ({ item, isLast }: MenuItemComponentProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state, item]);
 
+  if (item.component) {
+    return (
+        item.component()
+    )
+  }
+  
   return (
     <>
       <AnimatedTouchable
