@@ -7,6 +7,7 @@ export type MenuItemProps = {
   isTitle?: boolean;
   isDestructive?: boolean;
   withSeparator?: boolean;
+  component: any
 };
 
 export type MenuListProps = {
